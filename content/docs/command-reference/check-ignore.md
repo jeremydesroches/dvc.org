@@ -1,7 +1,7 @@
 # check-ignore
 
-Check whether any given files or directories are excluded from DVC
-due to the patterns found in [`.dvcignore`](/doc/user-guide/dvcignore).
+Check whether any given files or directories are excluded from DVC due to the
+patterns found in [`.dvcignore`](/doc/user-guide/dvcignore).
 
 ## Synopsis
 
@@ -15,8 +15,8 @@ positional arguments:
 
 ## Description
 
-For each pathname given via the command-line , check whether the file is excluded 
-by `.dvcignore` output the path if it is excluded.
+For each pathname given via the command-line , check whether the file is
+excluded by `.dvcignore` output the path if it is excluded.
 
 ## Options
 
@@ -57,11 +57,11 @@ file2
 $ dvc check-ignore other
 $ dvc check-ignore file*
 file1
-file2 
+file2
 ```
 
-If the `--details` option is used, a series of lines are printed using this format:
-`<source> <COLON> <linenum> <COLON> <pattern> <HT> <pathname>`
+If the `--details` option is used, a series of lines are printed using this
+format: `<source> <COLON> <linenum> <COLON> <pattern> <HT> <pathname>`
 
 ```dvc
 $ dvc check-ignore -d file1
@@ -74,9 +74,8 @@ $ dvc check-ignore -d file*
 .dvcignore:2:!file2	file2
 ```
 
-With the `--non-matching` option, non-matching `targets` will also be 
-included in the list. All fields in each line, except for `<target path>`, will
-be empty.
+With the `--non-matching` option, non-matching `targets` will also be included
+in the list. All fields in each line, except for `<target path>`, will be empty.
 
 ```dvc
 $ dvc check-ignore -d -n other
